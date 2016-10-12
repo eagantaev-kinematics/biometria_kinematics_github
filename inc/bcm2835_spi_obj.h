@@ -2,6 +2,6 @@
 
 
 
-void bcm2835_obj_init();
+void bcm2835_spi_obj_init();
 
 

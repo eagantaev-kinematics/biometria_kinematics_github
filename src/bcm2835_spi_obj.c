@@ -1,8 +1,9 @@
 #include "bcm2835_spi_obj.h"
+#include <bcm2835.h>
 
 
 
-void bcm2835_obj_init()
+void bcm2835_spi_obj_init()
 {
 	
 	// Inicializiruyem SPI                                                     	

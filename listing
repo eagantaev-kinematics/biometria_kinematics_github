@@ -1,0 +1,4 @@
+sync
+sync
+sleep 2
+gcc ./obj/main.o ./obj/udp_send_thread.o ./obj/bcm2835_spi_obj.o -o biometria_kinematika -lbcm2835 -lncurses -lpthread -lm -g -Wall
