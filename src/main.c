@@ -219,78 +219,8 @@ int main(int argc, char **argv)
                 hz = data_4x_board[8];                                                      
 
 
-				// kalibrovka
-				if(j == 0)
-				{
-					hx -= 45;
-					hy -= 5;
-					hz = hz -67 + 15;
-				}
-				if(j == 1)
-				{
-					hx -= 30;
-					hy += 0;
-					hz = hz + 15 - 32;
-					gyro_x -= 1250;
-					gyro_y += 300;
-				}
-				if(j == 2)
-				{
-					accel_x += 725;
-					hx -= 15;
-					hy += 0;
-					hz -= 75;
-					gyro_x += 65;
-					gyro_y -= 10;
-					gyro_z += 20;
-				}
-				if(j == 3)
-				{
-					accel_z += 100;
-					hx -= 21;
-					hy -= 11;
-					hz -= 65;
-					gyro_x += 1360;
-					gyro_y -= 915;
-				}
+				// kalibrovka ****************
 
-				if(j == 0 || j==1 || j==2 || j==3) //levaya ruka: plecho 1 predpl 2 kist 3 
-				{
-				    sensorsData[j][0] = gyro_x;
-				    sensorsData[j][1] = gyro_y;
-				    sensorsData[j][2] = gyro_z;
-				    sensorsData[j][3] = accel_x;
-				    sensorsData[j][4] = accel_y;
-				    sensorsData[j][5] = accel_z;
-				    sensorsData[j][6] = hx;
-				    sensorsData[j][7] = hy;
-				    sensorsData[j][8] = hz;
-				}
-				else if(j==16) //grud' 16
-				{
-				    sensorsData[j][0] = gyro_x;
-				    sensorsData[j][1] = gyro_y;
-				    sensorsData[j][2] = gyro_z;
-				    sensorsData[j][3] = accel_x;
-				    sensorsData[j][4] = accel_y;
-				    sensorsData[j][5] = accel_z;
-				    sensorsData[j][6] = hx;
-				    sensorsData[j][7] = hy;
-				    sensorsData[j][8] = hz;
-				}
-				else if(j==15) //zhivot 15
-				{
-				    sensorsData[j][0] = gyro_x;
-				    sensorsData[j][1] = gyro_y;
-				    sensorsData[j][2] = gyro_z;
-				    sensorsData[j][3] = accel_x;
-				    sensorsData[j][4] = accel_y;
-				    sensorsData[j][5] = accel_z;
-				    sensorsData[j][6] = hx;
-				    sensorsData[j][7] = hy;
-				    sensorsData[j][8] = hz;
-				}
-				else
 				{
 					//*/
 					// without rotation          
