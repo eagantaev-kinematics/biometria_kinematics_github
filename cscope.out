@@ -1,4 +1,1920 @@
-cscope 15 /home/workspace/github_space/biometria_kinematics_github               0000276557
+cscope 15 /home/workspace/github_space/biometria_kinematics_github               0000291466
+	@bcm2835.h
+
+318 #i‚de‡
+BCM2835_H
+
+
+319 
+	#BCM2835_H
+
+
+	)
+
+321 
+	~<°döt.h
+>
+
+329 
+	#HIGH
+ 0x1
+
+	)
+
+331 
+	#LOW
+ 0x0
+
+	)
+
+334 
+	#BCM2835_CORE_CLK_HZ
+ 250000000
+
+335 
+
+	)
+
+338 
+	#BCM2835_PERI_BASE
+ 0x20000000
+
+	)
+
+340 
+	#BCM2835_ST_BASE
+ (
+BCM2835_PERI_BASE
+ + 0x3000)
+
+	)
+
+342 
+	#BCM2835_GPIO_PADS
+ (
+BCM2835_PERI_BASE
+ + 0x100000)
+
+	)
+
+344 
+	#BCM2835_CLOCK_BASE
+ (
+BCM2835_PERI_BASE
+ + 0x101000)
+
+	)
+
+346 
+	#BCM2835_GPIO_BASE
+ (
+BCM2835_PERI_BASE
+ + 0x200000)
+
+	)
+
+348 
+	#BCM2835_SPI0_BASE
+ (
+BCM2835_PERI_BASE
+ + 0x204000)
+
+	)
+
+350 
+	#BCM2835_BSC0_BASE
+ (
+BCM2835_PERI_BASE
+ + 0x205000)
+
+	)
+
+352 
+	#BCM2835_GPIO_PWM
+ (
+BCM2835_PERI_BASE
+ + 0x20C000)
+
+	)
+
+354 
+	#BCM2835_BSC1_BASE
+ (
+BCM2835_PERI_BASE
+ + 0x804000)
+
+	)
+
+359 vﬁ©ûê
+uöt32_t
+ *
+bcm2835_°
+;
+
+363 vﬁ©ûê
+uöt32_t
+ *
+bcm2835_gpio
+;
+
+367 vﬁ©ûê
+uöt32_t
+ *
+bcm2835_pwm
+;
+
+371 vﬁ©ûê
+uöt32_t
+ *
+bcm2835_˛k
+;
+
+375 vﬁ©ûê
+uöt32_t
+ *
+bcm2835_∑ds
+;
+
+379 vﬁ©ûê
+uöt32_t
+ *
+bcm2835_•i0
+;
+
+383 vﬁ©ûê
+uöt32_t
+ *
+bcm2835_bsc0
+;
+
+387 vﬁ©ûê
+uöt32_t
+ *
+bcm2835_bsc1
+;
+
+390 
+	#BCM2835_PAGE_SIZE
+ (4*1024)
+
+	)
+
+392 
+	#BCM2835_BLOCK_SIZE
+ (4*1024)
+
+	)
+
+399 
+	#BCM2835_GPFSEL0
+ 0x0000
+
+400 
+	#BCM2835_GPFSEL1
+ 0x0004
+
+401 
+	#BCM2835_GPFSEL2
+ 0x0008
+
+402 
+	#BCM2835_GPFSEL3
+ 0x000c
+
+403 
+	#BCM2835_GPFSEL4
+ 0x0010
+
+404 
+	#BCM2835_GPFSEL5
+ 0x0014
+
+405 
+	#BCM2835_GPSET0
+ 0x001c
+
+406 
+	#BCM2835_GPSET1
+ 0x0020
+
+407 
+	#BCM2835_GPCLR0
+ 0x0028
+
+408 
+	#BCM2835_GPCLR1
+ 0x002c
+
+409 
+	#BCM2835_GPLEV0
+ 0x0034
+
+410 
+	#BCM2835_GPLEV1
+ 0x0038
+
+411 
+	#BCM2835_GPEDS0
+ 0x0040
+
+412 
+	#BCM2835_GPEDS1
+ 0x0044
+
+413 
+	#BCM2835_GPREN0
+ 0x004c
+
+414 
+	#BCM2835_GPREN1
+ 0x0050
+
+415 
+	#BCM2835_GPFEN0
+ 0x0058
+
+416 
+	#BCM2835_GPFEN1
+ 0x005c
+
+417 
+	#BCM2835_GPHEN0
+ 0x0064
+
+418 
+	#BCM2835_GPHEN1
+ 0x0068
+
+419 
+	#BCM2835_GPLEN0
+ 0x0070
+
+420 
+	#BCM2835_GPLEN1
+ 0x0074
+
+421 
+	#BCM2835_GPAREN0
+ 0x007c
+
+422 
+	#BCM2835_GPAREN1
+ 0x0080
+
+423 
+	#BCM2835_GPAFEN0
+ 0x0088
+
+424 
+	#BCM2835_GPAFEN1
+ 0x008c
+
+425 
+	#BCM2835_GPPUD
+ 0x0094
+
+426 
+	#BCM2835_GPPUDCLK0
+ 0x0098
+
+427 
+	#BCM2835_GPPUDCLK1
+ 0x009c
+
+428 
+
+	)
+
+433 
+	mBCM2835_GPIO_FSEL_INPT
+ = 0b000,
+
+434 
+	mBCM2835_GPIO_FSEL_OUTP
+ = 0b001,
+
+435 
+	mBCM2835_GPIO_FSEL_ALT0
+ = 0b100,
+
+436 
+	mBCM2835_GPIO_FSEL_ALT1
+ = 0b101,
+
+437 
+	mBCM2835_GPIO_FSEL_ALT2
+ = 0b110,
+
+438 
+	mBCM2835_GPIO_FSEL_ALT3
+ = 0b111,
+
+439 
+	mBCM2835_GPIO_FSEL_ALT4
+ = 0b011,
+
+440 
+	mBCM2835_GPIO_FSEL_ALT5
+ = 0b010,
+
+441 
+	mBCM2835_GPIO_FSEL_MASK
+ = 0b111
+
+442 } 
+	tbcm2835Fun˘i⁄Sñe˘
+;
+
+448 
+	mBCM2835_GPIO_PUD_OFF
+ = 0b00,
+
+449 
+	mBCM2835_GPIO_PUD_DOWN
+ = 0b01,
+
+450 
+	mBCM2835_GPIO_PUD_UP
+ = 0b10
+
+451 } 
+	tbcm2835PUDC⁄åﬁ
+;
+
+454 
+	#BCM2835_PADS_GPIO_0_27
+ 0x002c
+
+455 
+	#BCM2835_PADS_GPIO_28_45
+ 0x0030
+
+456 
+	#BCM2835_PADS_GPIO_46_53
+ 0x0034
+
+457 
+
+	)
+
+459 
+	#BCM2835_PAD_PASSWRD
+ (0x5A << 24)
+
+460 
+	#BCM2835_PAD_SLEW_RATE_UNLIMITED
+ 0x10
+
+461 
+	#BCM2835_PAD_HYSTERESIS_ENABLED
+ 0x08
+
+462 
+	#BCM2835_PAD_DRIVE_2mA
+ 0x00
+
+463 
+	#BCM2835_PAD_DRIVE_4mA
+ 0x01
+
+464 
+	#BCM2835_PAD_DRIVE_6mA
+ 0x02
+
+465 
+	#BCM2835_PAD_DRIVE_8mA
+ 0x03
+
+466 
+	#BCM2835_PAD_DRIVE_10mA
+ 0x04
+
+467 
+	#BCM2835_PAD_DRIVE_12mA
+ 0x05
+
+468 
+	#BCM2835_PAD_DRIVE_14mA
+ 0x06
+
+469 
+	#BCM2835_PAD_DRIVE_16mA
+ 0x07
+
+470 
+
+	)
+
+475 
+	mBCM2835_PAD_GROUP_GPIO_0_27
+ = 0,
+
+476 
+	mBCM2835_PAD_GROUP_GPIO_28_45
+ = 1,
+
+477 
+	mBCM2835_PAD_GROUP_GPIO_46_53
+ = 2
+
+478 } 
+	tbcm2835PadGroup
+;
+
+493 
+	mRPI_GPIO_P1_03
+ = 0,
+
+494 
+	mRPI_GPIO_P1_05
+ = 1,
+
+495 
+	mRPI_GPIO_P1_07
+ = 4,
+
+496 
+	mRPI_GPIO_P1_08
+ = 14,
+
+497 
+	mRPI_GPIO_P1_10
+ = 15,
+
+498 
+	mRPI_GPIO_P1_11
+ = 17,
+
+499 
+	mRPI_GPIO_P1_12
+ = 18,
+
+500 
+	mRPI_GPIO_P1_13
+ = 21,
+
+501 
+	mRPI_GPIO_P1_15
+ = 22,
+
+502 
+	mRPI_GPIO_P1_16
+ = 23,
+
+503 
+	mRPI_GPIO_P1_18
+ = 24,
+
+504 
+	mRPI_GPIO_P1_19
+ = 10,
+
+505 
+	mRPI_GPIO_P1_21
+ = 9,
+
+506 
+	mRPI_GPIO_P1_22
+ = 25,
+
+507 
+	mRPI_GPIO_P1_23
+ = 11,
+
+508 
+	mRPI_GPIO_P1_24
+ = 8,
+
+509 
+	mRPI_GPIO_P1_26
+ = 7,
+
+512 
+	mRPI_V2_GPIO_P1_03
+ = 2,
+
+513 
+	mRPI_V2_GPIO_P1_05
+ = 3,
+
+514 
+	mRPI_V2_GPIO_P1_07
+ = 4,
+
+515 
+	mRPI_V2_GPIO_P1_08
+ = 14,
+
+516 
+	mRPI_V2_GPIO_P1_10
+ = 15,
+
+517 
+	mRPI_V2_GPIO_P1_11
+ = 17,
+
+518 
+	mRPI_V2_GPIO_P1_12
+ = 18,
+
+519 
+	mRPI_V2_GPIO_P1_13
+ = 27,
+
+520 
+	mRPI_V2_GPIO_P1_15
+ = 22,
+
+521 
+	mRPI_V2_GPIO_P1_16
+ = 23,
+
+522 
+	mRPI_V2_GPIO_P1_18
+ = 24,
+
+523 
+	mRPI_V2_GPIO_P1_19
+ = 10,
+
+524 
+	mRPI_V2_GPIO_P1_21
+ = 9,
+
+525 
+	mRPI_V2_GPIO_P1_22
+ = 25,
+
+526 
+	mRPI_V2_GPIO_P1_23
+ = 11,
+
+527 
+	mRPI_V2_GPIO_P1_24
+ = 8,
+
+528 
+	mRPI_V2_GPIO_P1_26
+ = 7,
+
+531 
+	mRPI_V2_GPIO_P5_03
+ = 28,
+
+532 
+	mRPI_V2_GPIO_P5_04
+ = 29,
+
+533 
+	mRPI_V2_GPIO_P5_05
+ = 30,
+
+534 
+	mRPI_V2_GPIO_P5_06
+ = 31,
+
+537 
+	mRPI_BPLUS_GPIO_J8_03
+ = 2,
+
+538 
+	mRPI_BPLUS_GPIO_J8_05
+ = 3,
+
+539 
+	mRPI_BPLUS_GPIO_J8_07
+ = 4,
+
+540 
+	mRPI_BPLUS_GPIO_J8_08
+ = 14,
+
+541 
+	mRPI_BPLUS_GPIO_J8_10
+ = 15,
+
+542 
+	mRPI_BPLUS_GPIO_J8_11
+ = 17,
+
+543 
+	mRPI_BPLUS_GPIO_J8_12
+ = 18,
+
+544 
+	mRPI_BPLUS_GPIO_J8_13
+ = 27,
+
+545 
+	mRPI_BPLUS_GPIO_J8_15
+ = 22,
+
+546 
+	mRPI_BPLUS_GPIO_J8_16
+ = 23,
+
+547 
+	mRPI_BPLUS_GPIO_J8_18
+ = 24,
+
+548 
+	mRPI_BPLUS_GPIO_J8_19
+ = 10,
+
+549 
+	mRPI_BPLUS_GPIO_J8_21
+ = 9,
+
+550 
+	mRPI_BPLUS_GPIO_J8_22
+ = 25,
+
+551 
+	mRPI_BPLUS_GPIO_J8_23
+ = 11,
+
+552 
+	mRPI_BPLUS_GPIO_J8_24
+ = 8,
+
+553 
+	mRPI_BPLUS_GPIO_J8_26
+ = 7,
+
+554 
+	mRPI_BPLUS_GPIO_J8_29
+ = 5,
+
+555 
+	mRPI_BPLUS_GPIO_J8_31
+ = 6,
+
+556 
+	mRPI_BPLUS_GPIO_J8_32
+ = 12,
+
+557 
+	mRPI_BPLUS_GPIO_J8_33
+ = 13,
+
+558 
+	mRPI_BPLUS_GPIO_J8_35
+ = 19,
+
+559 
+	mRPI_BPLUS_GPIO_J8_36
+ = 16,
+
+560 
+	mRPI_BPLUS_GPIO_J8_37
+ = 26,
+
+561 
+	mRPI_BPLUS_GPIO_J8_38
+ = 20,
+
+562 
+	mRPI_BPLUS_GPIO_J8_40
+ = 21,
+
+563 } 
+	tRPiGPIOPö
+;
+
+568 
+	#BCM2835_SPI0_CS
+ 0x0000
+
+569 
+	#BCM2835_SPI0_FIFO
+ 0x0004
+
+570 
+	#BCM2835_SPI0_CLK
+ 0x0008
+
+571 
+	#BCM2835_SPI0_DLEN
+ 0x000c
+
+572 
+	#BCM2835_SPI0_LTOH
+ 0x0010
+
+573 
+	#BCM2835_SPI0_DC
+ 0x0014
+
+574 
+
+	)
+
+576 
+	#BCM2835_SPI0_CS_LEN_LONG
+ 0x02000000
+
+577 
+	#BCM2835_SPI0_CS_DMA_LEN
+ 0x01000000
+
+578 
+	#BCM2835_SPI0_CS_CSPOL2
+ 0x00800000
+
+579 
+	#BCM2835_SPI0_CS_CSPOL1
+ 0x00400000
+
+580 
+	#BCM2835_SPI0_CS_CSPOL0
+ 0x00200000
+
+581 
+	#BCM2835_SPI0_CS_RXF
+ 0x00100000
+
+582 
+	#BCM2835_SPI0_CS_RXR
+ 0x00080000
+
+583 
+	#BCM2835_SPI0_CS_TXD
+ 0x00040000
+
+584 
+	#BCM2835_SPI0_CS_RXD
+ 0x00020000
+
+585 
+	#BCM2835_SPI0_CS_DONE
+ 0x00010000
+
+586 
+	#BCM2835_SPI0_CS_TE_EN
+ 0x00008000
+
+587 
+	#BCM2835_SPI0_CS_LMONO
+ 0x00004000
+
+588 
+	#BCM2835_SPI0_CS_LEN
+ 0x00002000
+
+589 
+	#BCM2835_SPI0_CS_REN
+ 0x00001000
+
+590 
+	#BCM2835_SPI0_CS_ADCS
+ 0x00000800
+
+591 
+	#BCM2835_SPI0_CS_INTR
+ 0x00000400
+
+592 
+	#BCM2835_SPI0_CS_INTD
+ 0x00000200
+
+593 
+	#BCM2835_SPI0_CS_DMAEN
+ 0x00000100
+
+594 
+	#BCM2835_SPI0_CS_TA
+ 0x00000080
+
+595 
+	#BCM2835_SPI0_CS_CSPOL
+ 0x00000040
+
+596 
+	#BCM2835_SPI0_CS_CLEAR
+ 0x00000030
+
+597 
+	#BCM2835_SPI0_CS_CLEAR_RX
+ 0x00000020
+
+598 
+	#BCM2835_SPI0_CS_CLEAR_TX
+ 0x00000010
+
+599 
+	#BCM2835_SPI0_CS_CPOL
+ 0x00000008
+
+600 
+	#BCM2835_SPI0_CS_CPHA
+ 0x00000004
+
+601 
+	#BCM2835_SPI0_CS_CS
+ 0x00000003
+
+602 
+
+	)
+
+607 
+	mBCM2835_SPI_BIT_ORDER_LSBFIRST
+ = 0,
+
+608 
+	mBCM2835_SPI_BIT_ORDER_MSBFIRST
+ = 1
+
+609 }
+	tbcm2835SPIBôOrdî
+;
+
+615 
+	mBCM2835_SPI_MODE0
+ = 0,
+
+616 
+	mBCM2835_SPI_MODE1
+ = 1,
+
+617 
+	mBCM2835_SPI_MODE2
+ = 2,
+
+618 
+	mBCM2835_SPI_MODE3
+ = 3,
+
+619 }
+	tbcm2835SPIMode
+;
+
+625 
+	mBCM2835_SPI_CS0
+ = 0,
+
+626 
+	mBCM2835_SPI_CS1
+ = 1,
+
+627 
+	mBCM2835_SPI_CS2
+ = 2,
+
+628 
+	mBCM2835_SPI_CS_NONE
+ = 3,
+
+629 } 
+	tbcm2835SPIChùSñe˘
+;
+
+639 
+	mBCM2835_SPI_CLOCK_DIVIDER_65536
+ = 0,
+
+640 
+	mBCM2835_SPI_CLOCK_DIVIDER_32768
+ = 32768,
+
+641 
+	mBCM2835_SPI_CLOCK_DIVIDER_16384
+ = 16384,
+
+642 
+	mBCM2835_SPI_CLOCK_DIVIDER_8192
+ = 8192,
+
+643 
+	mBCM2835_SPI_CLOCK_DIVIDER_4096
+ = 4096,
+
+644 
+	mBCM2835_SPI_CLOCK_DIVIDER_2048
+ = 2048,
+
+645 
+	mBCM2835_SPI_CLOCK_DIVIDER_1024
+ = 1024,
+
+646 
+	mBCM2835_SPI_CLOCK_DIVIDER_512
+ = 512,
+
+647 
+	mBCM2835_SPI_CLOCK_DIVIDER_256
+ = 256,
+
+648 
+	mBCM2835_SPI_CLOCK_DIVIDER_128
+ = 128,
+
+649 
+	mBCM2835_SPI_CLOCK_DIVIDER_64
+ = 64,
+
+650 
+	mBCM2835_SPI_CLOCK_DIVIDER_32
+ = 32,
+
+651 
+	mBCM2835_SPI_CLOCK_DIVIDER_16
+ = 16,
+
+652 
+	mBCM2835_SPI_CLOCK_DIVIDER_8
+ = 8,
+
+653 
+	mBCM2835_SPI_CLOCK_DIVIDER_4
+ = 4,
+
+654 
+	mBCM2835_SPI_CLOCK_DIVIDER_2
+ = 2,
+
+655 
+	mBCM2835_SPI_CLOCK_DIVIDER_1
+ = 1,
+
+656 } 
+	tbcm2835SPIClockDividî
+;
+
+661 
+	#BCM2835_BSC_C
+ 0x0000
+
+662 
+	#BCM2835_BSC_S
+ 0x0004
+
+663 
+	#BCM2835_BSC_DLEN
+ 0x0008
+
+664 
+	#BCM2835_BSC_A
+ 0x000c
+
+665 
+	#BCM2835_BSC_FIFO
+ 0x0010
+
+666 
+	#BCM2835_BSC_DIV
+ 0x0014
+
+667 
+	#BCM2835_BSC_DEL
+ 0x0018
+
+668 
+	#BCM2835_BSC_CLKT
+ 0x001c
+
+669 
+
+	)
+
+671 
+	#BCM2835_BSC_C_I2CEN
+ 0x00008000
+
+672 
+	#BCM2835_BSC_C_INTR
+ 0x00000400
+
+673 
+	#BCM2835_BSC_C_INTT
+ 0x00000200
+
+674 
+	#BCM2835_BSC_C_INTD
+ 0x00000100
+
+675 
+	#BCM2835_BSC_C_ST
+ 0x00000080
+
+676 
+	#BCM2835_BSC_C_CLEAR_1
+ 0x00000020
+
+677 
+	#BCM2835_BSC_C_CLEAR_2
+ 0x00000010
+
+678 
+	#BCM2835_BSC_C_READ
+ 0x00000001
+
+679 
+
+	)
+
+681 
+	#BCM2835_BSC_S_CLKT
+ 0x00000200
+
+682 
+	#BCM2835_BSC_S_ERR
+ 0x00000100
+
+683 
+	#BCM2835_BSC_S_RXF
+ 0x00000080
+
+684 
+	#BCM2835_BSC_S_TXE
+ 0x00000040
+
+685 
+	#BCM2835_BSC_S_RXD
+ 0x00000020
+
+686 
+	#BCM2835_BSC_S_TXD
+ 0x00000010
+
+687 
+	#BCM2835_BSC_S_RXR
+ 0x00000008
+
+688 
+	#BCM2835_BSC_S_TXW
+ 0x00000004
+
+689 
+	#BCM2835_BSC_S_DONE
+ 0x00000002
+
+690 
+	#BCM2835_BSC_S_TA
+ 0x00000001
+
+691 
+
+	)
+
+692 
+	#BCM2835_BSC_FIFO_SIZE
+ 16
+
+693 
+
+	)
+
+699 
+	mBCM2835_I2C_CLOCK_DIVIDER_2500
+ = 2500,
+
+700 
+	mBCM2835_I2C_CLOCK_DIVIDER_626
+ = 626,
+
+701 
+	mBCM2835_I2C_CLOCK_DIVIDER_150
+ = 150,
+
+702 
+	mBCM2835_I2C_CLOCK_DIVIDER_148
+ = 148,
+
+703 } 
+	tbcm2835I2CClockDividî
+;
+
+709 
+	mBCM2835_I2C_REASON_OK
+ = 0x00,
+
+710 
+	mBCM2835_I2C_REASON_ERROR_NACK
+ = 0x01,
+
+711 
+	mBCM2835_I2C_REASON_ERROR_CLKT
+ = 0x02,
+
+712 
+	mBCM2835_I2C_REASON_ERROR_DATA
+ = 0x04,
+
+713 } 
+	tbcm2835I2CRós⁄Codes
+;
+
+725 
+	#BCM2835_ST_CS
+ 0x0000
+
+726 
+	#BCM2835_ST_CLO
+ 0x0004
+
+727 
+	#BCM2835_ST_CHI
+ 0x0008
+
+728 
+
+	)
+
+733 
+	#BCM2835_PWM_CONTROL
+ 0
+
+	)
+
+734 
+	#BCM2835_PWM_STATUS
+ 1
+
+	)
+
+735 
+	#BCM2835_PWM_DMAC
+ 2
+
+	)
+
+736 
+	#BCM2835_PWM0_RANGE
+ 4
+
+	)
+
+737 
+	#BCM2835_PWM0_DATA
+ 5
+
+	)
+
+738 
+	#BCM2835_PWM_FIF1
+ 6
+
+	)
+
+739 
+	#BCM2835_PWM1_RANGE
+ 8
+
+	)
+
+740 
+	#BCM2835_PWM1_DATA
+ 9
+
+	)
+
+743 
+	#BCM2835_PWMCLK_CNTL
+ 40
+
+	)
+
+744 
+	#BCM2835_PWMCLK_DIV
+ 41
+
+	)
+
+745 
+	#BCM2835_PWM_PASSWRD
+ (0x5A << 24)
+
+746 
+
+	)
+
+747 
+	#BCM2835_PWM1_MS_MODE
+ 0x8000
+
+748 
+	#BCM2835_PWM1_USEFIFO
+ 0x2000
+
+749 
+	#BCM2835_PWM1_REVPOLAR
+ 0x1000
+
+750 
+	#BCM2835_PWM1_OFFSTATE
+ 0x0800
+
+751 
+	#BCM2835_PWM1_REPEATFF
+ 0x0400
+
+752 
+	#BCM2835_PWM1_SERIAL
+ 0x0200
+
+753 
+	#BCM2835_PWM1_ENABLE
+ 0x0100
+
+754 
+
+	)
+
+755 
+	#BCM2835_PWM0_MS_MODE
+ 0x0080
+
+756 
+	#BCM2835_PWM_CLEAR_FIFO
+ 0x0040
+
+757 
+	#BCM2835_PWM0_USEFIFO
+ 0x0020
+
+758 
+	#BCM2835_PWM0_REVPOLAR
+ 0x0010
+
+759 
+	#BCM2835_PWM0_OFFSTATE
+ 0x0008
+
+760 
+	#BCM2835_PWM0_REPEATFF
+ 0x0004
+
+761 
+	#BCM2835_PWM0_SERIAL
+ 0x0002
+
+762 
+	#BCM2835_PWM0_ENABLE
+ 0x0001
+
+763 
+
+	)
+
+771 
+	mBCM2835_PWM_CLOCK_DIVIDER_32768
+ = 32768,
+
+772 
+	mBCM2835_PWM_CLOCK_DIVIDER_16384
+ = 16384,
+
+773 
+	mBCM2835_PWM_CLOCK_DIVIDER_8192
+ = 8192,
+
+774 
+	mBCM2835_PWM_CLOCK_DIVIDER_4096
+ = 4096,
+
+775 
+	mBCM2835_PWM_CLOCK_DIVIDER_2048
+ = 2048,
+
+776 
+	mBCM2835_PWM_CLOCK_DIVIDER_1024
+ = 1024,
+
+777 
+	mBCM2835_PWM_CLOCK_DIVIDER_512
+ = 512,
+
+778 
+	mBCM2835_PWM_CLOCK_DIVIDER_256
+ = 256,
+
+779 
+	mBCM2835_PWM_CLOCK_DIVIDER_128
+ = 128,
+
+780 
+	mBCM2835_PWM_CLOCK_DIVIDER_64
+ = 64,
+
+781 
+	mBCM2835_PWM_CLOCK_DIVIDER_32
+ = 32,
+
+782 
+	mBCM2835_PWM_CLOCK_DIVIDER_16
+ = 16,
+
+783 
+	mBCM2835_PWM_CLOCK_DIVIDER_8
+ = 8,
+
+784 
+	mBCM2835_PWM_CLOCK_DIVIDER_4
+ = 4,
+
+785 
+	mBCM2835_PWM_CLOCK_DIVIDER_2
+ = 2,
+
+786 
+	mBCM2835_PWM_CLOCK_DIVIDER_1
+ = 1,
+
+787 } 
+	tbcm2835PWMClockDividî
+;
+
+790 #i‚de‡
+BCM2835_NO_DELAY_COMPATIBILITY
+
+
+791 
+	#dñay
+(
+x
+Ë
+	`bcm2835_dñay
+(x)
+
+	)
+
+792 
+	#dñayMi¸o£c⁄ds
+(
+x
+Ë
+	`bcm2835_dñayMi¸o£c⁄ds
+(x)
+
+	)
+
+795 #ifde‡
+__˝lu•lus
+
+
+811 
+bcm2835_öô
+();
+
+815 
+bcm2835_˛o£
+();
+
+823 
+bcm2835_£t_debug
+(
+uöt8_t
+ 
+debug
+);
+
+839 
+uöt32_t
+ 
+bcm2835_≥ri_ªad
+(vﬁ©ûêuöt32_t* 
+∑ddr
+);
+
+848 
+uöt32_t
+ 
+bcm2835_≥ri_ªad_nb
+(vﬁ©ûêuöt32_t* 
+∑ddr
+);
+
+857 
+bcm2835_≥ri_wrôe
+(vﬁ©ûê
+uöt32_t
+* 
+∑ddr
+, uöt32_à
+vÆue
+);
+
+865 
+bcm2835_≥ri_wrôe_nb
+(vﬁ©ûê
+uöt32_t
+* 
+∑ddr
+, uöt32_à
+vÆue
+);
+
+878 
+bcm2835_≥ri_£t_bôs
+(vﬁ©ûê
+uöt32_t
+* 
+∑ddr
+, uöt32_à
+vÆue
+, uöt32_à
+mask
+);
+
+890 
+bcm2835_gpio_f£l
+(
+uöt8_t
+ 
+pö
+, uöt8_à
+mode
+);
+
+896 
+bcm2835_gpio_£t
+(
+uöt8_t
+ 
+pö
+);
+
+902 
+bcm2835_gpio_˛r
+(
+uöt8_t
+ 
+pö
+);
+
+908 
+bcm2835_gpio_£t_mu…i
+(
+uöt32_t
+ 
+mask
+);
+
+914 
+bcm2835_gpio_˛r_mu…i
+(
+uöt32_t
+ 
+mask
+);
+
+921 
+uöt8_t
+ 
+bcm2835_gpio_Àv
+(uöt8_à
+pö
+);
+
+930 
+uöt8_t
+ 
+bcm2835_gpio_eds
+(uöt8_à
+pö
+);
+
+936 
+bcm2835_gpio_£t_eds
+(
+uöt8_t
+ 
+pö
+);
+
+945 
+bcm2835_gpio_ªn
+(
+uöt8_t
+ 
+pö
+);
+
+949 
+bcm2835_gpio_˛r_ªn
+(
+uöt8_t
+ 
+pö
+);
+
+958 
+bcm2835_gpio_„n
+(
+uöt8_t
+ 
+pö
+);
+
+962 
+bcm2835_gpio_˛r_„n
+(
+uöt8_t
+ 
+pö
+);
+
+967 
+bcm2835_gpio_hí
+(
+uöt8_t
+ 
+pö
+);
+
+971 
+bcm2835_gpio_˛r_hí
+(
+uöt8_t
+ 
+pö
+);
+
+976 
+bcm2835_gpio_Àn
+(
+uöt8_t
+ 
+pö
+);
+
+980 
+bcm2835_gpio_˛r_Àn
+(
+uöt8_t
+ 
+pö
+);
+
+987 
+bcm2835_gpio_¨í
+(
+uöt8_t
+ 
+pö
+);
+
+991 
+bcm2835_gpio_˛r_¨í
+(
+uöt8_t
+ 
+pö
+);
+
+998 
+bcm2835_gpio_a„n
+(
+uöt8_t
+ 
+pö
+);
+
+1002 
+bcm2835_gpio_˛r_a„n
+(
+uöt8_t
+ 
+pö
+);
+
+1009 
+bcm2835_gpio_pud
+(
+uöt8_t
+ 
+pud
+);
+
+1016 
+bcm2835_gpio_pud˛k
+(
+uöt8_t
+ 
+pö
+, uöt8_à
+⁄
+);
+
+1021 
+uöt32_t
+ 
+bcm2835_gpio_∑d
+(
+uöt8_t
+ 
+group
+);
+
+1028 
+bcm2835_gpio_£t_∑d
+(
+uöt8_t
+ 
+group
+, 
+uöt32_t
+ 
+c⁄åﬁ
+);
+
+1039 
+bcm2835_dñay
+ (
+mûlis
+);
+
+1053 
+bcm2835_dñayMi¸o£c⁄ds
+ (
+uöt64_t
+ 
+mi¸os
+);
+
+1058 
+bcm2835_gpio_wrôe
+(
+uöt8_t
+ 
+pö
+, uöt8_à
+⁄
+);
+
+1063 
+bcm2835_gpio_wrôe_mu…i
+(
+uöt32_t
+ 
+mask
+, 
+uöt8_t
+ 
+⁄
+);
+
+1068 
+bcm2835_gpio_wrôe_mask
+(
+uöt32_t
+ 
+vÆue
+, uöt32_à
+mask
+);
+
+1074 
+bcm2835_gpio_£t_pud
+(
+uöt8_t
+ 
+pö
+, uöt8_à
+pud
+);
+
+1089 
+bcm2835_•i_begö
+();
+
+1094 
+bcm2835_•i_íd
+();
+
+1101 
+bcm2835_•i_£tBôOrdî
+(
+uöt8_t
+ 
+‹dî
+);
+
+1107 
+bcm2835_•i_£tClockDividî
+(
+uöt16_t
+ 
+dividî
+);
+
+1113 
+bcm2835_•i_£tD©aMode
+(
+uöt8_t
+ 
+mode
+);
+
+1120 
+bcm2835_•i_chùSñe˘
+(
+uöt8_t
+ 
+cs
+);
+
+1129 
+bcm2835_•i_£tChùSñe˘Pﬁ¨ôy
+(
+uöt8_t
+ 
+cs
+, uöt8_à
+a˘ive
+);
+
+1140 
+uöt8_t
+ 
+bcm2835_•i_å™s„r
+(uöt8_à
+vÆue
+);
+
+1152 
+bcm2835_•i_å™s„∫b
+(* 
+tbuf
+, * 
+rbuf
+, 
+uöt32_t
+ 
+Àn
+);
+
+1160 
+bcm2835_•i_å™s„∫
+(* 
+buf
+, 
+uöt32_t
+ 
+Àn
+);
+
+1167 
+bcm2835_•i_wrôíb
+(* 
+buf
+, 
+uöt32_t
+ 
+Àn
+);
+
+1182 
+bcm2835_i2c_begö
+();
+
+1187 
+bcm2835_i2c_íd
+();
+
+1191 
+bcm2835_i2c_£tSœveAddªss
+(
+uöt8_t
+ 
+addr
+);
+
+1196 
+bcm2835_i2c_£tClockDividî
+(
+uöt16_t
+ 
+dividî
+);
+
+1203 
+bcm2835_i2c_£t_baudøã
+(
+uöt32_t
+ 
+baudøã
+);
+
+1210 
+uöt8_t
+ 
+bcm2835_i2c_wrôe
+(c⁄° * 
+buf
+, 
+uöt32_t
+ 
+Àn
+);
+
+1217 
+uöt8_t
+ 
+bcm2835_i2c_ªad
+(* 
+buf
+, 
+uöt32_t
+ 
+Àn
+);
+
+1232 
+uöt8_t
+ 
+bcm2835_i2c_ªad_ªgi°î_rs
+(* 
+ªgaddr
+, * 
+buf
+, 
+uöt32_t
+ 
+Àn
+);
+
+1243 
+uöt8_t
+ 
+bcm2835_i2c_wrôe_ªad_rs
+(* 
+cmds
+, 
+uöt32_t
+ 
+cmds_Àn
+, * 
+buf
+, uöt32_à
+buf_Àn
+);
+
+1253 
+uöt64_t
+ 
+bcm2835_°_ªad
+();
+
+1258 
+bcm2835_°_dñay
+(
+uöt64_t
+ 
+off£t_mi¸os
+, uöt64_à
+mi¸os
+);
+
+1273 
+bcm2835_pwm_£t_˛ock
+(
+uöt32_t
+ 
+divis‹
+);
+
+1280 
+bcm2835_pwm_£t_mode
+(
+uöt8_t
+ 
+ch™√l
+, uöt8_à
+m¨k•a˚
+, uöt8_à
+íabÀd
+);
+
+1286 
+bcm2835_pwm_£t_ønge
+(
+uöt8_t
+ 
+ch™√l
+, 
+uöt32_t
+ 
+ønge
+);
+
+1293 
+bcm2835_pwm_£t_d©a
+(
+uöt8_t
+ 
+ch™√l
+, 
+uöt32_t
+ 
+d©a
+);
+
+1296 #ifde‡
+__˝lu•lus
+
+
 	@inc/bcm2835_spi_obj.h
 
 5 
@@ -9960,6 +11876,922 @@ __thªad2
 1170 
 	g__END_DECLS
 
+
+	@/usr/include/stdint.h
+
+22 #i‚de‡
+_STDINT_H
+
+
+23 
+	#_STDINT_H
+ 1
+
+	)
+
+25 
+	~<„©uªs.h
+>
+
+26 
+	~<bôs/wch¨.h
+>
+
+27 
+	~<bôs/w‹dsize.h
+>
+
+34 #i‚de‡
+__öt8_t_deföed
+
+
+35 
+	#__öt8_t_deföed
+
+
+	)
+
+36 sig√d 
+	töt8_t
+;
+
+37 
+	töt16_t
+;
+
+38 
+	töt32_t
+;
+
+39 #i‡
+__WORDSIZE
+ == 64
+
+40 
+	töt64_t
+;
+
+42 
+__exãnsi⁄__
+
+
+43 
+	töt64_t
+;
+
+48 
+	tuöt8_t
+;
+
+49 
+	tuöt16_t
+;
+
+50 #i‚de‡
+__uöt32_t_deföed
+
+
+51 
+	tuöt32_t
+;
+
+52 
+	#__uöt32_t_deföed
+
+
+	)
+
+54 #i‡
+__WORDSIZE
+ == 64
+
+55 
+	tuöt64_t
+;
+
+57 
+__exãnsi⁄__
+
+
+58 
+	tuöt64_t
+;
+
+65 sig√d 
+	töt_Àa°8_t
+;
+
+66 
+	töt_Àa°16_t
+;
+
+67 
+	töt_Àa°32_t
+;
+
+68 #i‡
+__WORDSIZE
+ == 64
+
+69 
+	töt_Àa°64_t
+;
+
+71 
+__exãnsi⁄__
+
+
+72 
+	töt_Àa°64_t
+;
+
+76 
+	tuöt_Àa°8_t
+;
+
+77 
+	tuöt_Àa°16_t
+;
+
+78 
+	tuöt_Àa°32_t
+;
+
+79 #i‡
+__WORDSIZE
+ == 64
+
+80 
+	tuöt_Àa°64_t
+;
+
+82 
+__exãnsi⁄__
+
+
+83 
+	tuöt_Àa°64_t
+;
+
+90 sig√d 
+	töt_Á°8_t
+;
+
+91 #i‡
+__WORDSIZE
+ == 64
+
+92 
+	töt_Á°16_t
+;
+
+93 
+	töt_Á°32_t
+;
+
+94 
+	töt_Á°64_t
+;
+
+96 
+	töt_Á°16_t
+;
+
+97 
+	töt_Á°32_t
+;
+
+98 
+__exãnsi⁄__
+
+
+99 
+	töt_Á°64_t
+;
+
+103 
+	tuöt_Á°8_t
+;
+
+104 #i‡
+__WORDSIZE
+ == 64
+
+105 
+	tuöt_Á°16_t
+;
+
+106 
+	tuöt_Á°32_t
+;
+
+107 
+	tuöt_Á°64_t
+;
+
+109 
+	tuöt_Á°16_t
+;
+
+110 
+	tuöt_Á°32_t
+;
+
+111 
+__exãnsi⁄__
+
+
+112 
+	tuöt_Á°64_t
+;
+
+117 #i‡
+__WORDSIZE
+ == 64
+
+118 #i‚de‡
+__öçå_t_deföed
+
+
+119 
+	töçå_t
+;
+
+120 
+	#__öçå_t_deföed
+
+
+	)
+
+122 
+	tuöçå_t
+;
+
+124 #i‚de‡
+__öçå_t_deföed
+
+
+125 
+	töçå_t
+;
+
+126 
+	#__öçå_t_deföed
+
+
+	)
+
+128 
+	tuöçå_t
+;
+
+133 #i‡
+__WORDSIZE
+ == 64
+
+134 
+	tötmax_t
+;
+
+135 
+	tuötmax_t
+;
+
+137 
+__exãnsi⁄__
+
+
+138 
+	tötmax_t
+;
+
+139 
+__exãnsi⁄__
+
+
+140 
+	tuötmax_t
+;
+
+144 #i‡
+__WORDSIZE
+ == 64
+
+145 
+	#__INT64_C
+(
+c
+Ë¯## 
+L
+
+
+	)
+
+146 
+	#__UINT64_C
+(
+c
+Ë¯## 
+UL
+
+
+	)
+
+148 
+	#__INT64_C
+(
+c
+Ë¯## 
+LL
+
+
+	)
+
+149 
+	#__UINT64_C
+(
+c
+Ë¯## 
+ULL
+
+
+	)
+
+155 
+	#INT8_MIN
+ (-128)
+
+	)
+
+156 
+	#INT16_MIN
+ (-32767-1)
+
+	)
+
+157 
+	#INT32_MIN
+ (-2147483647-1)
+
+	)
+
+158 
+	#INT64_MIN
+ (-
+	`__INT64_C
+(9223372036854775807)-1)
+
+	)
+
+160 
+	#INT8_MAX
+ (127)
+
+	)
+
+161 
+	#INT16_MAX
+ (32767)
+
+	)
+
+162 
+	#INT32_MAX
+ (2147483647)
+
+	)
+
+163 
+	#INT64_MAX
+ (
+	`__INT64_C
+(9223372036854775807))
+
+	)
+
+166 
+	#UINT8_MAX
+ (255)
+
+	)
+
+167 
+	#UINT16_MAX
+ (65535)
+
+	)
+
+168 
+	#UINT32_MAX
+ (4294967295U)
+
+	)
+
+169 
+	#UINT64_MAX
+ (
+	`__UINT64_C
+(18446744073709551615))
+
+	)
+
+173 
+	#INT_LEAST8_MIN
+ (-128)
+
+	)
+
+174 
+	#INT_LEAST16_MIN
+ (-32767-1)
+
+	)
+
+175 
+	#INT_LEAST32_MIN
+ (-2147483647-1)
+
+	)
+
+176 
+	#INT_LEAST64_MIN
+ (-
+	`__INT64_C
+(9223372036854775807)-1)
+
+	)
+
+178 
+	#INT_LEAST8_MAX
+ (127)
+
+	)
+
+179 
+	#INT_LEAST16_MAX
+ (32767)
+
+	)
+
+180 
+	#INT_LEAST32_MAX
+ (2147483647)
+
+	)
+
+181 
+	#INT_LEAST64_MAX
+ (
+	`__INT64_C
+(9223372036854775807))
+
+	)
+
+184 
+	#UINT_LEAST8_MAX
+ (255)
+
+	)
+
+185 
+	#UINT_LEAST16_MAX
+ (65535)
+
+	)
+
+186 
+	#UINT_LEAST32_MAX
+ (4294967295U)
+
+	)
+
+187 
+	#UINT_LEAST64_MAX
+ (
+	`__UINT64_C
+(18446744073709551615))
+
+	)
+
+191 
+	#INT_FAST8_MIN
+ (-128)
+
+	)
+
+192 #i‡
+__WORDSIZE
+ == 64
+
+193 
+	#INT_FAST16_MIN
+ (-9223372036854775807L-1)
+
+	)
+
+194 
+	#INT_FAST32_MIN
+ (-9223372036854775807L-1)
+
+	)
+
+196 
+	#INT_FAST16_MIN
+ (-2147483647-1)
+
+	)
+
+197 
+	#INT_FAST32_MIN
+ (-2147483647-1)
+
+	)
+
+199 
+	#INT_FAST64_MIN
+ (-
+	`__INT64_C
+(9223372036854775807)-1)
+
+	)
+
+201 
+	#INT_FAST8_MAX
+ (127)
+
+	)
+
+202 #i‡
+__WORDSIZE
+ == 64
+
+203 
+	#INT_FAST16_MAX
+ (9223372036854775807L)
+
+	)
+
+204 
+	#INT_FAST32_MAX
+ (9223372036854775807L)
+
+	)
+
+206 
+	#INT_FAST16_MAX
+ (2147483647)
+
+	)
+
+207 
+	#INT_FAST32_MAX
+ (2147483647)
+
+	)
+
+209 
+	#INT_FAST64_MAX
+ (
+	`__INT64_C
+(9223372036854775807))
+
+	)
+
+212 
+	#UINT_FAST8_MAX
+ (255)
+
+	)
+
+213 #i‡
+__WORDSIZE
+ == 64
+
+214 
+	#UINT_FAST16_MAX
+ (18446744073709551615UL)
+
+	)
+
+215 
+	#UINT_FAST32_MAX
+ (18446744073709551615UL)
+
+	)
+
+217 
+	#UINT_FAST16_MAX
+ (4294967295U)
+
+	)
+
+218 
+	#UINT_FAST32_MAX
+ (4294967295U)
+
+	)
+
+220 
+	#UINT_FAST64_MAX
+ (
+	`__UINT64_C
+(18446744073709551615))
+
+	)
+
+224 #i‡
+__WORDSIZE
+ == 64
+
+225 
+	#INTPTR_MIN
+ (-9223372036854775807L-1)
+
+	)
+
+226 
+	#INTPTR_MAX
+ (9223372036854775807L)
+
+	)
+
+227 
+	#UINTPTR_MAX
+ (18446744073709551615UL)
+
+	)
+
+229 
+	#INTPTR_MIN
+ (-2147483647-1)
+
+	)
+
+230 
+	#INTPTR_MAX
+ (2147483647)
+
+	)
+
+231 
+	#UINTPTR_MAX
+ (4294967295U)
+
+	)
+
+236 
+	#INTMAX_MIN
+ (-
+	`__INT64_C
+(9223372036854775807)-1)
+
+	)
+
+238 
+	#INTMAX_MAX
+ (
+	`__INT64_C
+(9223372036854775807))
+
+	)
+
+241 
+	#UINTMAX_MAX
+ (
+	`__UINT64_C
+(18446744073709551615))
+
+	)
+
+247 #i‡
+__WORDSIZE
+ == 64
+
+248 
+	#PTRDIFF_MIN
+ (-9223372036854775807L-1)
+
+	)
+
+249 
+	#PTRDIFF_MAX
+ (9223372036854775807L)
+
+	)
+
+251 
+	#PTRDIFF_MIN
+ (-2147483647-1)
+
+	)
+
+252 
+	#PTRDIFF_MAX
+ (2147483647)
+
+	)
+
+256 
+	#SIG_ATOMIC_MIN
+ (-2147483647-1)
+
+	)
+
+257 
+	#SIG_ATOMIC_MAX
+ (2147483647)
+
+	)
+
+260 #i‡
+__WORDSIZE
+ == 64
+
+261 
+	#SIZE_MAX
+ (18446744073709551615UL)
+
+	)
+
+263 
+	#SIZE_MAX
+ (4294967295U)
+
+	)
+
+267 #i‚de‡
+WCHAR_MIN
+
+
+269 
+	#WCHAR_MIN
+ 
+__WCHAR_MIN
+
+
+	)
+
+270 
+	#WCHAR_MAX
+ 
+__WCHAR_MAX
+
+
+	)
+
+274 
+	#WINT_MIN
+ (0u)
+
+	)
+
+275 
+	#WINT_MAX
+ (4294967295u)
+
+	)
+
+278 
+	#INT8_C
+(
+c
+Ë
+	)
+c
+
+279 
+	#INT16_C
+(
+c
+Ë
+	)
+c
+
+280 
+	#INT32_C
+(
+c
+Ë
+	)
+c
+
+281 #i‡
+__WORDSIZE
+ == 64
+
+282 
+	#INT64_C
+(
+c
+Ë¯## 
+L
+
+
+	)
+
+284 
+	#INT64_C
+(
+c
+Ë¯## 
+LL
+
+
+	)
+
+288 
+	#UINT8_C
+(
+c
+Ë
+	)
+c
+
+289 
+	#UINT16_C
+(
+c
+Ë
+	)
+c
+
+290 
+	#UINT32_C
+(
+c
+Ë¯## 
+U
+
+
+	)
+
+291 #i‡
+__WORDSIZE
+ == 64
+
+292 
+	#UINT64_C
+(
+c
+Ë¯## 
+UL
+
+
+	)
+
+294 
+	#UINT64_C
+(
+c
+Ë¯## 
+ULL
+
+
+	)
+
+298 #i‡
+__WORDSIZE
+ == 64
+
+299 
+	#INTMAX_C
+(
+c
+Ë¯## 
+L
+
+
+	)
+
+300 
+	#UINTMAX_C
+(
+c
+Ë¯## 
+UL
+
+
+	)
+
+302 
+	#INTMAX_C
+(
+c
+Ë¯## 
+LL
+
+
+	)
+
+303 
+	#UINTMAX_C
+(
+c
+Ë¯## 
+ULL
+
+
+	)
 
 	@/usr/include/stdio.h
 
@@ -26853,6 +29685,82 @@ __U32_TYPE
 __STD_TYPE
 
 
+	@/usr/include/bits/wchar.h
+
+19 #i‚de‡
+_BITS_WCHAR_H
+
+
+20 
+	#_BITS_WCHAR_H
+ 1
+
+	)
+
+33 #ifde‡
+__WCHAR_MAX__
+
+
+34 
+	#__WCHAR_MAX
+ 
+__WCHAR_MAX__
+
+
+	)
+
+35 #ñi‡
+L
+'\0' - 1 > 0
+
+36 
+	#__WCHAR_MAX
+ (0xffffffffu + 
+L
+'\0')
+
+	)
+
+38 
+	#__WCHAR_MAX
+ (0x7ffffff‡+ 
+L
+'\0')
+
+	)
+
+41 #ifde‡
+__WCHAR_MIN__
+
+
+42 
+	#__WCHAR_MIN
+ 
+__WCHAR_MIN__
+
+
+	)
+
+43 #ñi‡
+L
+'\0' - 1 > 0
+
+44 
+	#__WCHAR_MIN
+ (
+L
+'\0' + 0)
+
+	)
+
+46 
+	#__WCHAR_MIN
+ (-
+__WCHAR_MAX
+ - 1)
+
+	)
+
 	@/usr/include/bits/wordsize.h
 
 18 
@@ -31131,922 +34039,6 @@ __THROW
 __END_DECLS
 
 
-	@/usr/include/stdint.h
-
-22 #i‚de‡
-_STDINT_H
-
-
-23 
-	#_STDINT_H
- 1
-
-	)
-
-25 
-	~<„©uªs.h
->
-
-26 
-	~<bôs/wch¨.h
->
-
-27 
-	~<bôs/w‹dsize.h
->
-
-34 #i‚de‡
-__öt8_t_deföed
-
-
-35 
-	#__öt8_t_deföed
-
-
-	)
-
-36 sig√d 
-	töt8_t
-;
-
-37 
-	töt16_t
-;
-
-38 
-	töt32_t
-;
-
-39 #i‡
-__WORDSIZE
- == 64
-
-40 
-	töt64_t
-;
-
-42 
-__exãnsi⁄__
-
-
-43 
-	töt64_t
-;
-
-48 
-	tuöt8_t
-;
-
-49 
-	tuöt16_t
-;
-
-50 #i‚de‡
-__uöt32_t_deföed
-
-
-51 
-	tuöt32_t
-;
-
-52 
-	#__uöt32_t_deföed
-
-
-	)
-
-54 #i‡
-__WORDSIZE
- == 64
-
-55 
-	tuöt64_t
-;
-
-57 
-__exãnsi⁄__
-
-
-58 
-	tuöt64_t
-;
-
-65 sig√d 
-	töt_Àa°8_t
-;
-
-66 
-	töt_Àa°16_t
-;
-
-67 
-	töt_Àa°32_t
-;
-
-68 #i‡
-__WORDSIZE
- == 64
-
-69 
-	töt_Àa°64_t
-;
-
-71 
-__exãnsi⁄__
-
-
-72 
-	töt_Àa°64_t
-;
-
-76 
-	tuöt_Àa°8_t
-;
-
-77 
-	tuöt_Àa°16_t
-;
-
-78 
-	tuöt_Àa°32_t
-;
-
-79 #i‡
-__WORDSIZE
- == 64
-
-80 
-	tuöt_Àa°64_t
-;
-
-82 
-__exãnsi⁄__
-
-
-83 
-	tuöt_Àa°64_t
-;
-
-90 sig√d 
-	töt_Á°8_t
-;
-
-91 #i‡
-__WORDSIZE
- == 64
-
-92 
-	töt_Á°16_t
-;
-
-93 
-	töt_Á°32_t
-;
-
-94 
-	töt_Á°64_t
-;
-
-96 
-	töt_Á°16_t
-;
-
-97 
-	töt_Á°32_t
-;
-
-98 
-__exãnsi⁄__
-
-
-99 
-	töt_Á°64_t
-;
-
-103 
-	tuöt_Á°8_t
-;
-
-104 #i‡
-__WORDSIZE
- == 64
-
-105 
-	tuöt_Á°16_t
-;
-
-106 
-	tuöt_Á°32_t
-;
-
-107 
-	tuöt_Á°64_t
-;
-
-109 
-	tuöt_Á°16_t
-;
-
-110 
-	tuöt_Á°32_t
-;
-
-111 
-__exãnsi⁄__
-
-
-112 
-	tuöt_Á°64_t
-;
-
-117 #i‡
-__WORDSIZE
- == 64
-
-118 #i‚de‡
-__öçå_t_deföed
-
-
-119 
-	töçå_t
-;
-
-120 
-	#__öçå_t_deföed
-
-
-	)
-
-122 
-	tuöçå_t
-;
-
-124 #i‚de‡
-__öçå_t_deföed
-
-
-125 
-	töçå_t
-;
-
-126 
-	#__öçå_t_deföed
-
-
-	)
-
-128 
-	tuöçå_t
-;
-
-133 #i‡
-__WORDSIZE
- == 64
-
-134 
-	tötmax_t
-;
-
-135 
-	tuötmax_t
-;
-
-137 
-__exãnsi⁄__
-
-
-138 
-	tötmax_t
-;
-
-139 
-__exãnsi⁄__
-
-
-140 
-	tuötmax_t
-;
-
-144 #i‡
-__WORDSIZE
- == 64
-
-145 
-	#__INT64_C
-(
-c
-Ë¯## 
-L
-
-
-	)
-
-146 
-	#__UINT64_C
-(
-c
-Ë¯## 
-UL
-
-
-	)
-
-148 
-	#__INT64_C
-(
-c
-Ë¯## 
-LL
-
-
-	)
-
-149 
-	#__UINT64_C
-(
-c
-Ë¯## 
-ULL
-
-
-	)
-
-155 
-	#INT8_MIN
- (-128)
-
-	)
-
-156 
-	#INT16_MIN
- (-32767-1)
-
-	)
-
-157 
-	#INT32_MIN
- (-2147483647-1)
-
-	)
-
-158 
-	#INT64_MIN
- (-
-	`__INT64_C
-(9223372036854775807)-1)
-
-	)
-
-160 
-	#INT8_MAX
- (127)
-
-	)
-
-161 
-	#INT16_MAX
- (32767)
-
-	)
-
-162 
-	#INT32_MAX
- (2147483647)
-
-	)
-
-163 
-	#INT64_MAX
- (
-	`__INT64_C
-(9223372036854775807))
-
-	)
-
-166 
-	#UINT8_MAX
- (255)
-
-	)
-
-167 
-	#UINT16_MAX
- (65535)
-
-	)
-
-168 
-	#UINT32_MAX
- (4294967295U)
-
-	)
-
-169 
-	#UINT64_MAX
- (
-	`__UINT64_C
-(18446744073709551615))
-
-	)
-
-173 
-	#INT_LEAST8_MIN
- (-128)
-
-	)
-
-174 
-	#INT_LEAST16_MIN
- (-32767-1)
-
-	)
-
-175 
-	#INT_LEAST32_MIN
- (-2147483647-1)
-
-	)
-
-176 
-	#INT_LEAST64_MIN
- (-
-	`__INT64_C
-(9223372036854775807)-1)
-
-	)
-
-178 
-	#INT_LEAST8_MAX
- (127)
-
-	)
-
-179 
-	#INT_LEAST16_MAX
- (32767)
-
-	)
-
-180 
-	#INT_LEAST32_MAX
- (2147483647)
-
-	)
-
-181 
-	#INT_LEAST64_MAX
- (
-	`__INT64_C
-(9223372036854775807))
-
-	)
-
-184 
-	#UINT_LEAST8_MAX
- (255)
-
-	)
-
-185 
-	#UINT_LEAST16_MAX
- (65535)
-
-	)
-
-186 
-	#UINT_LEAST32_MAX
- (4294967295U)
-
-	)
-
-187 
-	#UINT_LEAST64_MAX
- (
-	`__UINT64_C
-(18446744073709551615))
-
-	)
-
-191 
-	#INT_FAST8_MIN
- (-128)
-
-	)
-
-192 #i‡
-__WORDSIZE
- == 64
-
-193 
-	#INT_FAST16_MIN
- (-9223372036854775807L-1)
-
-	)
-
-194 
-	#INT_FAST32_MIN
- (-9223372036854775807L-1)
-
-	)
-
-196 
-	#INT_FAST16_MIN
- (-2147483647-1)
-
-	)
-
-197 
-	#INT_FAST32_MIN
- (-2147483647-1)
-
-	)
-
-199 
-	#INT_FAST64_MIN
- (-
-	`__INT64_C
-(9223372036854775807)-1)
-
-	)
-
-201 
-	#INT_FAST8_MAX
- (127)
-
-	)
-
-202 #i‡
-__WORDSIZE
- == 64
-
-203 
-	#INT_FAST16_MAX
- (9223372036854775807L)
-
-	)
-
-204 
-	#INT_FAST32_MAX
- (9223372036854775807L)
-
-	)
-
-206 
-	#INT_FAST16_MAX
- (2147483647)
-
-	)
-
-207 
-	#INT_FAST32_MAX
- (2147483647)
-
-	)
-
-209 
-	#INT_FAST64_MAX
- (
-	`__INT64_C
-(9223372036854775807))
-
-	)
-
-212 
-	#UINT_FAST8_MAX
- (255)
-
-	)
-
-213 #i‡
-__WORDSIZE
- == 64
-
-214 
-	#UINT_FAST16_MAX
- (18446744073709551615UL)
-
-	)
-
-215 
-	#UINT_FAST32_MAX
- (18446744073709551615UL)
-
-	)
-
-217 
-	#UINT_FAST16_MAX
- (4294967295U)
-
-	)
-
-218 
-	#UINT_FAST32_MAX
- (4294967295U)
-
-	)
-
-220 
-	#UINT_FAST64_MAX
- (
-	`__UINT64_C
-(18446744073709551615))
-
-	)
-
-224 #i‡
-__WORDSIZE
- == 64
-
-225 
-	#INTPTR_MIN
- (-9223372036854775807L-1)
-
-	)
-
-226 
-	#INTPTR_MAX
- (9223372036854775807L)
-
-	)
-
-227 
-	#UINTPTR_MAX
- (18446744073709551615UL)
-
-	)
-
-229 
-	#INTPTR_MIN
- (-2147483647-1)
-
-	)
-
-230 
-	#INTPTR_MAX
- (2147483647)
-
-	)
-
-231 
-	#UINTPTR_MAX
- (4294967295U)
-
-	)
-
-236 
-	#INTMAX_MIN
- (-
-	`__INT64_C
-(9223372036854775807)-1)
-
-	)
-
-238 
-	#INTMAX_MAX
- (
-	`__INT64_C
-(9223372036854775807))
-
-	)
-
-241 
-	#UINTMAX_MAX
- (
-	`__UINT64_C
-(18446744073709551615))
-
-	)
-
-247 #i‡
-__WORDSIZE
- == 64
-
-248 
-	#PTRDIFF_MIN
- (-9223372036854775807L-1)
-
-	)
-
-249 
-	#PTRDIFF_MAX
- (9223372036854775807L)
-
-	)
-
-251 
-	#PTRDIFF_MIN
- (-2147483647-1)
-
-	)
-
-252 
-	#PTRDIFF_MAX
- (2147483647)
-
-	)
-
-256 
-	#SIG_ATOMIC_MIN
- (-2147483647-1)
-
-	)
-
-257 
-	#SIG_ATOMIC_MAX
- (2147483647)
-
-	)
-
-260 #i‡
-__WORDSIZE
- == 64
-
-261 
-	#SIZE_MAX
- (18446744073709551615UL)
-
-	)
-
-263 
-	#SIZE_MAX
- (4294967295U)
-
-	)
-
-267 #i‚de‡
-WCHAR_MIN
-
-
-269 
-	#WCHAR_MIN
- 
-__WCHAR_MIN
-
-
-	)
-
-270 
-	#WCHAR_MAX
- 
-__WCHAR_MAX
-
-
-	)
-
-274 
-	#WINT_MIN
- (0u)
-
-	)
-
-275 
-	#WINT_MAX
- (4294967295u)
-
-	)
-
-278 
-	#INT8_C
-(
-c
-Ë
-	)
-c
-
-279 
-	#INT16_C
-(
-c
-Ë
-	)
-c
-
-280 
-	#INT32_C
-(
-c
-Ë
-	)
-c
-
-281 #i‡
-__WORDSIZE
- == 64
-
-282 
-	#INT64_C
-(
-c
-Ë¯## 
-L
-
-
-	)
-
-284 
-	#INT64_C
-(
-c
-Ë¯## 
-LL
-
-
-	)
-
-288 
-	#UINT8_C
-(
-c
-Ë
-	)
-c
-
-289 
-	#UINT16_C
-(
-c
-Ë
-	)
-c
-
-290 
-	#UINT32_C
-(
-c
-Ë¯## 
-U
-
-
-	)
-
-291 #i‡
-__WORDSIZE
- == 64
-
-292 
-	#UINT64_C
-(
-c
-Ë¯## 
-UL
-
-
-	)
-
-294 
-	#UINT64_C
-(
-c
-Ë¯## 
-ULL
-
-
-	)
-
-298 #i‡
-__WORDSIZE
- == 64
-
-299 
-	#INTMAX_C
-(
-c
-Ë¯## 
-L
-
-
-	)
-
-300 
-	#UINTMAX_C
-(
-c
-Ë¯## 
-UL
-
-
-	)
-
-302 
-	#INTMAX_C
-(
-c
-Ë¯## 
-LL
-
-
-	)
-
-303 
-	#UINTMAX_C
-(
-c
-Ë¯## 
-ULL
-
-
-	)
-
 	@/usr/include/sys/select.h
 
 21 #i‚de‡
@@ -35430,82 +37422,6 @@ __THROW
 74 
 __END_DECLS
 
-
-	@/usr/include/bits/wchar.h
-
-19 #i‚de‡
-_BITS_WCHAR_H
-
-
-20 
-	#_BITS_WCHAR_H
- 1
-
-	)
-
-33 #ifde‡
-__WCHAR_MAX__
-
-
-34 
-	#__WCHAR_MAX
- 
-__WCHAR_MAX__
-
-
-	)
-
-35 #ñi‡
-L
-'\0' - 1 > 0
-
-36 
-	#__WCHAR_MAX
- (0xffffffffu + 
-L
-'\0')
-
-	)
-
-38 
-	#__WCHAR_MAX
- (0x7ffffff‡+ 
-L
-'\0')
-
-	)
-
-41 #ifde‡
-__WCHAR_MIN__
-
-
-42 
-	#__WCHAR_MIN
- 
-__WCHAR_MIN__
-
-
-	)
-
-43 #ñi‡
-L
-'\0' - 1 > 0
-
-44 
-	#__WCHAR_MIN
- (
-L
-'\0' + 0)
-
-	)
-
-46 
-	#__WCHAR_MIN
- (-
-__WCHAR_MAX
- - 1)
-
-	)
 
 	@/usr/include/ctype.h
 
@@ -48216,8 +50132,9 @@ __ASM_GENERIC_SOCKIOS_H
 .
 1
 /usr/include
-80
-2055
+81
+2065
+bcm2835.h
 inc/bcm2835_spi_obj.h
 inc/main.h
 inc/sensors_obj.h
@@ -48231,6 +50148,7 @@ src/udp_send_thread.c
 /usr/include/math.h
 /usr/include/netinet/in.h
 /usr/include/pthread.h
+/usr/include/stdint.h
 /usr/include/stdio.h
 /usr/include/sys/socket.h
 /usr/include/sys/types.h
@@ -48258,13 +50176,13 @@ src/udp_send_thread.c
 /usr/include/bits/sys_errlist.h
 /usr/include/bits/time.h
 /usr/include/bits/types.h
+/usr/include/bits/wchar.h
 /usr/include/bits/wordsize.h
 /usr/include/endian.h
 /usr/include/features.h
 /usr/include/getopt.h
 /usr/include/libio.h
 /usr/include/sched.h
-/usr/include/stdint.h
 /usr/include/sys/select.h
 /usr/include/sys/sysmacros.h
 /usr/include/sys/uio.h
@@ -48283,7 +50201,6 @@ src/udp_send_thread.c
 /usr/include/bits/timex.h
 /usr/include/bits/typesizes.h
 /usr/include/bits/uio.h
-/usr/include/bits/wchar.h
 /usr/include/ctype.h
 /usr/include/gnu/stubs.h
 /usr/include/stdc-predef.h
