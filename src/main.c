@@ -121,10 +121,12 @@ int main(int argc, char **argv)
 	//FILE *log_file;
 	//char *application_log = "/root/app_logs/biometria_kinematics_log";
 
-	struct timespec sleep_interval;
+	struct timespec sleep_interval, sleep_1_msec;
 
 	sleep_interval.tv_sec = 0;
 	sleep_interval.tv_nsec = 24000000;	// 25 mSec
+	sleep_1_msec.tv_sec = 0;
+	sleep_1_msec.tv_nsec = 1000000;	// 1 mSec
 
 
 	pthread_t udpSendThread;
@@ -186,9 +188,8 @@ int main(int argc, char **argv)
 	            one_usec_delay();                                                         
 			    one_usec_delay();                                                         
 			    chipselhigh();                                                            
-	            one_usec_delay();                                                         
-			    one_usec_delay();                                                         
-	                                                                                                           
+
+				nanosleep(&sleep_1_msec, NULL);
 	                                                                                                           
 	            //read_data_from_4x_board();                                              
 			    for(i=0; i<9; i++)                                                                             
